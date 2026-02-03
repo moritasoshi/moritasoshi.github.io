@@ -223,22 +223,65 @@
       50% { opacity: 1; }
     }
 
-    /* === レスポンシブ === */
+    /* === レスポンシブ（スマホ縦向き名刺） === */
+    /* iPhone 12 (390px) を含む一般的なスマホをカバー */
     @media (max-width: 600px) {
+      .card-container {
+        aspect-ratio: 55 / 91; /* 縦向き名刺比率 */
+        max-width: 320px;
+      }
+
       .card-face {
-        padding: 24px 28px;
+        padding: 28px 24px;
+      }
+
+      .card-front .header {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .title-block {
+        text-align: center;
+      }
+
+      .logo {
+        width: 56px;
+        height: 56px;
+      }
+
+      .name-block {
+        text-align: center;
       }
 
       .name-jp {
-        font-size: 22px;
+        font-size: 24px;
+      }
+
+      .contact-block {
+        align-items: center;
       }
 
       .card-back {
-        padding: 20px 24px;
+        padding: 24px 20px;
+      }
+
+      .back-header {
+        padding-bottom: 12px;
+        margin-bottom: 16px;
       }
 
       .section {
-        margin-bottom: 14px;
+        margin-bottom: 16px;
+      }
+
+      .section-content {
+        font-size: 11px;
+      }
+
+      .skill-tag {
+        font-size: 10px;
+        padding: 3px 8px;
       }
     }
   </style>
